@@ -53,7 +53,7 @@ pip install requirements.txt
 Generate a standard square QR code with terminal preview saved to `output.png`:
 
 ```bash
-python main.py create "https://github.com"
+python main.py "https://github.com"
 ```
 
 ### Circle Module Style
@@ -61,7 +61,7 @@ python main.py create "https://github.com"
 Generate a QR code using circle modules and save it to a specific file path:
 
 ```bash
-python main.py create "https://github.com" -o github.png --style circle
+python main.py "https://github.com" -o github.png --style circle
 ```
 
 ### Disable Terminal Preview
@@ -69,11 +69,17 @@ python main.py create "https://github.com" -o github.png --style circle
 Generate only the PNG file without printing the ASCII block preview:
 
 ```bash
-python main.py create "https://github.com" -o github.png --no-preview
+python main.py "https://github.com" -o github.png --no-preview
 ```
 
 ### Check Available Options
 
 ```bash
-python main.py create --help
+python main.py --help
 ```
+
+---
+
+### Future Changes
+
+As for later, I will try to implement the ability to add embedded logos/icons and colors to make it more customizable.
