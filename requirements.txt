@@ -1,0 +1,10 @@
+annotated-doc==0.0.5
+colorama==0.4.6
+markdown-it-py==4.2.0
+mdurl==0.1.2
+pillow==12.3.0
+Pygments==2.21.0
+qrcode==8.2
+rich==15.0.0
+shellingham==1.5.4
+typer==0.27.2
