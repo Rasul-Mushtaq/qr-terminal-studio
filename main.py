@@ -17,7 +17,6 @@ def print_ascii_preview(data: str) -> None:
     qr.make(fit=True)
     
     console.print("\n[bold cyan]Terminal ASCII Preview:[/bold cyan]")
-    # Render inverted block ASCII characters to terminal
     matrix = qr.get_matrix()
     for row in matrix:
         line = "".join("██" if cell else "  " for cell in row)
@@ -34,16 +33,36 @@ def create(
     style: str = typer.Option(
         "square", "--style", "-s", help="Module design style: 'square' or 'circle'"
     ),
+    fill_color: str = typer.Option(
+        "#000000", "--fill", "-f", help="Foreground color in hex (e.g. '#1E1E2E') or name"
+    ),
+    bg_color: str = typer.Option(
+        "#FFFFFF", "--bg", "-b", help="Background color in hex (e.g. '#89B4FA') or name"
+    ),
+    logo: Optional[Path] = typer.Option(
+        None, "--logo", "-l", help="Path to an image file (PNG/JPG) to embed in the center"
+    ),
+    logo_size: float = typer.Option(
+        0.2, "--logo-size", help="Logo scale factor (0.1 to 0.3)"
+    ),
     preview: bool = typer.Option(
         True, "--preview/--no-preview", help="Render ASCII preview in terminal"
     ),
 ) -> None:
-    """Generate a custom QR code image with optional ASCII terminal preview."""
+    """Generate a customized QR code image with custom styling, colors, and embedded logos."""
     try:
         if preview:
             print_ascii_preview(data)
 
-        saved_path = generate_qr(data=data, output_path=output, style=style)
+        saved_path = generate_qr(
+            data=data,
+            output_path=output,
+            fill_color=fill_color,
+            back_color=bg_color,
+            style=style,
+            logo_path=logo,
+            logo_scale=logo_size,
+        )
         console.print(
             f"[bold green]✔ Success![/bold green] QR code saved to [yellow]{saved_path}[/yellow]"
         )
