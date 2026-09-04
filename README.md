@@ -64,6 +64,22 @@ Generate a QR code using circle modules and save it to a specific file path:
 python main.py "https://github.com" -o github.png --style circle
 ```
 
+### Embedding a logo/icon
+
+Generate a QR Code with an embedded logo at the center with the ability to scale it's size.
+
+```bash
+python main.py "https://github.com" -o github.png --style circle -l github_logo.png --logo-size 0.3
+```
+
+### Background & Foreground HEX Colors
+
+Generate a QR Code with the color combination of your choice.
+
+```bash
+python main.py "https://github.com" -o github.png --style circle -l github_logo.png --logo-size 0.3 -f "#1E1E2E" -b "#89B4FA"
+```
+
 ### Disable Terminal Preview
 
 Generate only the PNG file without printing the ASCII block preview:
@@ -80,6 +96,12 @@ python main.py --help
 
 ---
 
-### Future Changes
+### New Changes
 
-As for later, I will try to implement the ability to add embedded logos/icons and colors to make it more customizable.
+- Added the ability to customize the QR Code (HEX Colors & Embedded logos/icons)
+
+---
+
+### Future Work
+
+- Adding a GUI
