@@ -24,6 +24,7 @@ A lightweight Python CLI tool for creating styled QR codes right from your termi
 - **Instant Terminal Preview:** Renders an ASCII QR code directly in terminal output before saving.
 - **Custom Module Styles:** Choose between standard square modules or rounded circle modules.
 - **Clean CLI Interface:** Built-in command handling, argument parsing, and error reporting.
+- **Modern Desktop GUI:** An optional user interface for the ease of use.
 
 ## Setup Instructions
 
@@ -89,6 +90,16 @@ Generate only the PNG file without printing the ASCII block preview:
 ```bash
 python main.py create "https://github.com" -o github.png --no-preview
 ```
+
+---
+
+### Access The GUI
+
+```bash
+python main.py gui
+```
+
+---
 
 ### Check Available Options
 
