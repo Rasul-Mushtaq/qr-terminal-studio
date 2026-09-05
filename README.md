@@ -53,7 +53,7 @@ pip install requirements.txt
 Generate a standard square QR code with terminal preview saved to `output.png`:
 
 ```bash
-python main.py "https://github.com"
+python main.py create "https://github.com"
 ```
 
 ### Circle Module Style
@@ -61,7 +61,7 @@ python main.py "https://github.com"
 Generate a QR code using circle modules and save it to a specific file path:
 
 ```bash
-python main.py "https://github.com" -o github.png --style circle
+python main.py create "https://github.com" -o github.png --style circle
 ```
 
 ### Embedding a logo/icon
@@ -69,7 +69,7 @@ python main.py "https://github.com" -o github.png --style circle
 Generate a QR Code with an embedded logo at the center with the ability to scale it's size.
 
 ```bash
-python main.py "https://github.com" -o github.png --style circle -l github_logo.png --logo-size 0.3
+python main.py create "https://github.com" -o github.png --style circle -l github_logo.png --logo-size 0.3
 ```
 
 ### Background & Foreground HEX Colors
@@ -77,7 +77,7 @@ python main.py "https://github.com" -o github.png --style circle -l github_logo.
 Generate a QR Code with the color combination of your choice.
 
 ```bash
-python main.py "https://github.com" -o github.png --style circle -l github_logo.png --logo-size 0.3 -f "#1E1E2E" -b "#89B4FA"
+python main.py create "https://github.com" -o github.png --style circle -l github_logo.png --logo-size 0.3 -f "#1E1E2E" -b "#89B4FA"
 ```
 
 ### Disable Terminal Preview
@@ -85,13 +85,19 @@ python main.py "https://github.com" -o github.png --style circle -l github_logo.
 Generate only the PNG file without printing the ASCII block preview:
 
 ```bash
-python main.py "https://github.com" -o github.png --no-preview
+python main.py create "https://github.com" -o github.png --no-preview
 ```
 
 ### Check Available Options
 
 ```bash
 python main.py --help
+```
+
+and
+
+```bash
+python main.py create --help
 ```
 
 ---

@@ -25,6 +25,17 @@ def print_ascii_preview(data: str) -> None:
 
 
 @app.command()
+def gui() -> None:
+    """Launch the Graphical User Interface (GUI) mode."""
+    try:
+        from gui import launch_gui
+        console.print("[bold green]Launching Desktop GUI...[/bold green]")
+        launch_gui()
+    except Exception as err:
+        console.print(f"[bold red]Error launching GUI:[/bold red] {err}")
+        raise typer.Exit(code=1)
+
+@app.command()
 def create(
     data: str = typer.Argument(..., help="Text, URL, or data payload to encode"),
     output: Path = typer.Option(
