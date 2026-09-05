@@ -105,9 +105,4 @@ python main.py create --help
 ### New Changes
 
 - Added the ability to customize the QR Code (HEX Colors & Embedded logos/icons)
-
----
-
-### Future Work
-
-- Adding a GUI
+- Added GUI using Customtkinter
