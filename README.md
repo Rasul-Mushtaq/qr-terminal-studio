@@ -5,6 +5,7 @@ A lightweight Python CLI tool for creating styled QR codes right from your termi
 > ### Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![CustomTkinter](https://img.shields.io/badge/CustomTkinter-00599?style=for-the-badge&logo=python&logoColor=white)
 ![Typer](https://img.shields.io/badge/Typer-009688?style=for-the-badge&logo=python&logoColor=white)
 ![Rich](https://img.shields.io/badge/Rich-202020?style=for-the-badge&logo=python&logoColor=white)
 ![Pillow](https://img.shields.io/badge/Pillow-00599C?style=for-the-badge&logo=python&logoColor=white)
@@ -12,6 +13,7 @@ A lightweight Python CLI tool for creating styled QR codes right from your termi
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 
 - **Language:** Python 3.10+
+- **Desktop GUI:** CustomTkinter
 - **CLI Framework:** Typer (built on Click)
 - **Terminal UI & Formatting:** Rich
 - **Image Processing & QR Engine:** Pillow (PIL) and `qrcode`
